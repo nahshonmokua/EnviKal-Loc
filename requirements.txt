@@ -1,5 +1,6 @@
 pandas
 numpy
+seaborn 
 matplotlib
 scikit-learn
 pykalman
