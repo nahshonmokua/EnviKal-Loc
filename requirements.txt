@@ -1,7 +1,9 @@
 pandas
 numpy
-seaborn 
 matplotlib
+seaborn
 scikit-learn
+statsmodels
+scipy
 pykalman
 
