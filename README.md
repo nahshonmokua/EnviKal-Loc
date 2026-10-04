@@ -77,6 +77,9 @@ Distance is then obtained by inversion of the fitted path loss models.
 4. [04_Distance_Estimation.ipynb](04_Distance_Estimation.ipynb)  
    Loads the fitted path loss parameters, performs model inversion, and evaluates distance estimation performance.
 
+5. [05_Robustness_Checks.ipynb](05_Robustness_Checks.ipynb)  
+   Rebuilds the pipeline from the cleaned dataset (and checks it against the saved results of step 4), then tests the ranging results beyond the six fitted links: leave-one-link-out ranging, per-link calibration from the last N packets, removal of the SF and channel shifts, day-block bootstrap intervals, baselines (causal smoothing windows, a Kalman filter with tuned Q, a constant guess, LightGBM rangers) and a censoring check from frame-counter gaps. Needs `lightgbm` and writes `Figures/robustness_calibration_smoothing.png` and `.pdf`.
+
 Optional exploratory analysis is available in [00_Time_Series_Analysis.ipynb](00_Time_Series_Analysis.ipynb).
 
 ## Main Artifacts
