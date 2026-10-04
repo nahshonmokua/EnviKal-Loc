@@ -58,7 +58,7 @@ $$
 **MWM-EP**
 
 $$
-PL(d) = PL(d_0) + 10n\log_{10}\left(\frac{d}{d_0}\right) + 20\log_{10}(f) + W_cL_c + W_wL_w + \sum_{j=1}^{5}\theta_jE_j + k_{snr}\,snr + \epsilon
+PL(d) = PL(d_0) + 10n\log_{10}\left(\frac{d}{d_0}\right) + 20\log_{10}(f) + W_cL_c + W_wL_w + \sum_{j=1}^{5}\theta_jE_j + \epsilon
 $$
 
 Distance is then obtained by inversion of the fitted path loss models.
@@ -66,7 +66,7 @@ Distance is then obtained by inversion of the fitted path loss models.
 ## Workflow
 
 1. [01_Data Preparation.ipynb](01_Data%20Preparation.ipynb)  
-   Reads the cleaned dataset, performs the time-aware train/test split, and writes `Data Files/train.csv`, `Data Files/test.csv`, and `Data Files/train_folds.npy`.
+   Reads the cleaned dataset, performs the time-aware train/test split, and writes `Data Files/train.csv` and `Data Files/test.csv`.
 
 2. [02_Kalman_Filtering.ipynb](02_Kalman_Filtering.ipynb)  
    Applies the adaptive Kalman filter per device and writes `Data Files/train_kf.csv` and `Data Files/test_kf.csv`.
